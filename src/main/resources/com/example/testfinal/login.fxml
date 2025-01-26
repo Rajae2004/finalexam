@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.testfinal.LoginController" spacing="0" stylesheets="@/styles.css">
+
+    <!-- Section gauche : Bienvenue -->
+    <VBox alignment="CENTER" spacing="15" prefWidth="300" styleClass="welcome-section">
+        <Label text="Bienvenue !" />
+        <Label text="Rejoignez-nous pour prendre soin de vous." />
+        <Button text="Créer un compte" onAction="#goToRegister"/>
+    </VBox>
+
+    <!-- Section droite : Connexion -->
+    <VBox alignment="CENTER" spacing="15" prefWidth="300" style="-fx-padding: 20;">
+        <Label text="Connexion" />
+        <TextField fx:id="usernameField" promptText="Nom d'utilisateur" styleClass="text-field"/>
+        <PasswordField fx:id="passwordField" promptText="Mot de passe" styleClass="password-field"/>
+        <Button text="Se connecter" onAction="#login" styleClass="button"/>
+    </VBox>
+
+</HBox>

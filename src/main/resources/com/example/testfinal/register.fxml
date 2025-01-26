@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<HBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.testfinal.RegisterController" spacing="20"
+      stylesheets="@/styles.css">
+
+    <!-- Section de gauche : Formulaire d'inscription -->
+    <VBox alignment="CENTER" spacing="15" prefWidth="350" styleClass="registration-form">
+        <Label text="Inscription" styleClass="section-title"/>
+
+        <!-- Champ pour le nom d'utilisateur -->
+        <TextField fx:id="usernameField" promptText="Nom d'utilisateur" styleClass="input-field"/>
+
+        <!-- Champ pour le mot de passe -->
+        <PasswordField fx:id="passwordField" promptText="Mot de passe" styleClass="input-field"/>
+
+        <!-- Champ pour le poids -->
+        <TextField fx:id="weightField" promptText="Poids (kg)" styleClass="input-field"/>
+
+        <!-- Champ pour la taille -->
+        <TextField fx:id="heightField" promptText="Taille (cm)" styleClass="input-field"/>
+
+        <!-- Choix du sexe -->
+        <ComboBox fx:id="sexComboBox" styleClass="input-field">
+            <promptText>Sexe</promptText>
+        </ComboBox>
+
+        <!-- Champ pour le poids désiré -->
+        <TextField fx:id="desiredWeightField" promptText="Poids désiré (kg)" styleClass="input-field"/>
+
+        <!-- Bouton pour s'inscrire -->
+        <Button text="S'inscrire" onAction="#register" styleClass="register-button"/>
+
+        <!-- Lien vers la page de connexion -->
+        <Hyperlink text="Déjà un compte ? Se connecter" onAction="#goToLogin"/>
+
+        <!-- Message d'erreur (invisible par défaut) -->
+        <Label fx:id="errorMessage" styleClass="error-label" visible="false"/>
+    </VBox>
+
+</HBox>
+
+
+
+
+
+

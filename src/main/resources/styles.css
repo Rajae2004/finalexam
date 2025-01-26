@@ -1,0 +1,220 @@
+/* Styles généraux pour l'ensemble de l'application */
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 16px;
+    -fx-base: #f0f0f0;
+    -fx-background-color: #f8f1f9;
+}
+
+/* Design des boutons */
+.button {
+    -fx-background-color: #f78da7;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 25;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0, 0, 2);
+    -fx-border-color: #f78da7;
+}
+
+.button:hover {
+    -fx-background-color: #f66783;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 5);
+}
+
+/* Champ de texte (TextField et PasswordField) */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-text-fill: #333;
+    -fx-padding: 8 15;
+    -fx-border-radius: 30;
+    -fx-border-color: #ddd;
+    -fx-background-radius: 30px;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+/* Label (Texte des labels) */
+.label {
+    -fx-text-fill: #333;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Page de connexion (Login Page) */
+.welcome-section {
+    -fx-background-color: linear-gradient(to bottom, #f78da7, #f9a7b0);
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-padding: 30;
+    -fx-border-radius: 25;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 5);
+}
+
+.welcome-section .label {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Design de la section de gestion des rendez-vous */
+.rendezvous-container {
+    -fx-background-color: #f8f1f9;
+    -fx-alignment: center;
+    -fx-spacing: 20;
+    -fx-padding: 25;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 10, 5);
+}
+
+/* Titres de la page de gestion des rendez-vous */
+.page-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9C27B0;
+    -fx-font-family: "Arial Rounded MT Bold";
+}
+
+/* Design du formulaire de rendez-vous */
+.input-field {
+    -fx-background-color: white;
+    -fx-text-fill: #333;
+    -fx-padding: 8 15;
+    -fx-border-radius: 30;
+    -fx-border-color: #ddd;
+    -fx-background-radius: 30px;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+/* Boutons d'action dans la gestion des rendez-vous */
+.action-button {
+    -fx-background-color: #FF4081;
+    -fx-text-fill: white;
+    -fx-padding: 12 25;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0, 0, 5);
+}
+
+.action-button:hover {
+    -fx-background-color: #F50057;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 5);
+}
+
+/* Liste des rendez-vous */
+.list-view {
+    -fx-border-color: #BA68C8;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+    -fx-focus-color: #F06292;
+}
+
+/* Design de l'input pour les notes supplémentaires */
+.text-area {
+    -fx-background-color: white;
+    -fx-text-fill: #333;
+    -fx-padding: 8 15;
+    -fx-border-radius: 30;
+    -fx-border-color: #ddd;
+    -fx-background-radius: 30px;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+/* Design des messages d'alerte */
+.alert {
+    -fx-background-color: #FF4081;
+    -fx-text-fill: white;
+    -fx-border-radius: 20px;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0, 0, 2);
+}
+
+.alert .button {
+    -fx-background-color: #F06292;
+    -fx-text-fill: white;
+    -fx-border-radius: 15px;
+    -fx-padding: 10 15;
+}
+
+.alert .button:hover {
+    -fx-background-color: #F78DA7;
+}
+
+/* Section spécifique des rendez-vous */
+.rendez-vous-section {
+    -fx-background-color: #FFE4E1; /* Rose pâle */
+    -fx-border-radius: 20px;
+    -fx-padding: 30;
+    -fx-spacing: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
+}
+
+/* Modifications pour la gestion des rendez-vous avec un design féminin et organisé */
+.rendezvous-container {
+    -fx-background-color: #f8f1f9;
+    -fx-alignment: center;
+    -fx-spacing: 20;
+    -fx-padding: 25;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 10, 5);
+}
+
+.page-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9C27B0;
+    -fx-font-family: "Arial Rounded MT Bold";
+}
+
+.section-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9b2d7d; /* Violet doux */
+    -fx-alignment: center;
+}
+
+/* Styles pour les labels et champs de saisie */
+.text-field, .date-picker {
+    -fx-font-size: 14px;
+    -fx-border-color: #d1a8d1;
+    -fx-border-radius: 8;
+    -fx-background-color: #ffffff;
+    -fx-padding: 8;
+}
+
+.text-field:focused, .date-picker:focused {
+    -fx-border-color: #9b2d7d;
+}
+
+.feminine-button {
+    -fx-background-color: #9b2d7d;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 30;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 4);
+}
+
+.feminine-button:hover {
+    -fx-background-color: #7b1b6b;
+}
+
+
+
+
+
+
+
+
+
+
+

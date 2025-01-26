@@ -1,0 +1,8 @@
+fk:nh
+rj:fd
+khadija:kh
+raj:fd
+khadouj:kh
+Rajae:rj
+khadij:kh:75,000000:168,000000:Femme:60,000000
+rajae:fd:80,000000:163,000000:Femme:60,000000

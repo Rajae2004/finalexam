@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>  <!-- Importation pour le graphique -->
+<?import javafx.scene.chart.NumberAxis?>  <!-- Importation pour les axes -->
+
+
+
+
+
+<HBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.testfinal.ActivityController" spacing="20"
+      style="-fx-font-family: 'Segoe UI', sans-serif; -fx-font-size: 16px; -fx-background-color: #f8f1f9;">
+
+    <!-- Section gauche : Formulaire d'ajout d'activité -->
+    <VBox alignment="CENTER" spacing="15" prefWidth="300"
+          style="-fx-background-color: #fff; -fx-alignment: center; -fx-spacing: 20; -fx-padding: 20; -fx-border-radius: 25px; -fx-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+        <Button fx:id="backButton" text="Retour" onAction="#goBack"
+                style="-fx-font-size: 16px; -fx-padding: 12px; -fx-background-color: #FF4081; -fx-text-fill: white; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-margin-bottom: 20px;"/>
+
+        <Label text="Ajouter une Activité 🌺" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #9C27B0; -fx-font-family: 'Arial Rounded MT Bold';"/>
+        <TextField fx:id="activityNameField" promptText="Nom de l'activité"
+                   style="-fx-background-color: white; -fx-text-fill: #333; -fx-padding: 8 15; -fx-border-radius: 30; -fx-border-color: #ddd; -fx-font-size: 14px;"/>
+        <TextField fx:id="durationField" promptText="Durée (en minutes)"
+                   style="-fx-background-color: white; -fx-text-fill: #333; -fx-padding: 8 15; -fx-border-radius: 30; -fx-border-color: #ddd; -fx-font-size: 14px;"/>
+        <TextField fx:id="caloriesField" promptText="Calories brûlées"
+                   style="-fx-background-color: white; -fx-text-fill: #333; -fx-padding: 8 15; -fx-border-radius: 30; -fx-border-color: #ddd; -fx-font-size: 14px;"/>
+        <Button fx:id="addActivityButton" text="Ajouter" onAction="#addActivity"
+                style="-fx-font-size: 16px; -fx-padding: 12px; -fx-background-color: #F78DA7; -fx-text-fill: white; -fx-border-radius: 10px; -fx-background-radius: 10px;"/>
+    </VBox>
+
+    <!-- Section du milieu : Liste des activités -->
+    <VBox alignment="CENTER" spacing="15" prefWidth="300"
+          style="-fx-background-color: #fff; -fx-alignment: center; -fx-spacing: 20; -fx-padding: 20; -fx-border-radius: 25px; -fx-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+        <Label text="🌸 Activités enregistrées 🌸" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #9C27B0; -fx-font-family: 'Arial Rounded MT Bold';"/>
+        <ListView fx:id="activitiesListView" prefHeight="200"
+                  style="-fx-border-color: #BA68C8; -fx-border-radius: 8px; -fx-background-radius: 8px; -fx-font-size: 14px;"/>
+        <Button fx:id="viewActivitiesButton" text="Voir Activités" onAction="#viewActivities"
+                style="-fx-font-size: 16px; -fx-padding: 12px; -fx-background-color: #F78DA7; -fx-text-fill: white; -fx-border-radius: 10px; -fx-background-radius: 10px;"/>
+
+        <Button fx:id="showProgressButton" text="Voir la Progression"
+                onAction="#showProgress"
+                style="-fx-font-size: 16px; -fx-padding: 12px; -fx-background-color: #FF4081; -fx-text-fill: white; -fx-border-radius: 10px; -fx-background-radius: 10px;"/>
+    </VBox>
+
+    <!-- Section droite : Graphique et message de motivation -->
+    <VBox alignment="CENTER" spacing="15" prefWidth="300"
+          style="-fx-background-color: #fff; -fx-alignment: center; -fx-spacing: 20; -fx-padding: 20; -fx-border-radius: 25px; -fx-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+
+        <!-- Graphique de progression -->
+        <LineChart fx:id="progressChart" prefWidth="400" prefHeight="300"
+                   style="-fx-background-color: #fff;">
+            <xAxis>
+                <NumberAxis label="Calories Brûlées"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Poids Perdu (kg)"/>
+            </yAxis>
+        </LineChart>
+
+        <!-- Message de motivation -->
+        <Label fx:id="motivationMessage" text="Continuez comme ça ! Vous êtes sur la bonne voie ! 💪"
+               style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #FF4081; -fx-font-family: 'Segoe UI';"/>
+    </VBox>
+</HBox>

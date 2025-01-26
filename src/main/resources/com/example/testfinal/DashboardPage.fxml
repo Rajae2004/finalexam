@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.testfinal.DashboardController" spacing="20" alignment="CENTER"
+      style="-fx-font-family: 'Segoe UI', sans-serif; -fx-font-size: 16px; -fx-background-color: #f8f1f9;">
+
+    <!-- Titre avec un design élégant -->
+    <Label text="🌸 Dashboard 🌸" style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #9C27B0; -fx-font-family: 'Arial Rounded MT Bold';"/>
+
+    <!-- Section des boutons -->
+    <VBox spacing="15" alignment="CENTER" prefWidth="400">
+        <Button fx:id="manageActivitiesButton" text="Gérer les Activités" onAction="#manageActivities"
+                style="-fx-background-color: #FF4081; -fx-text-fill: white; -fx-padding: 12 25; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-font-size: 16px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0, 0, 5);"/>
+        <Button fx:id="viewMealsButton" text="Consulter les Repas" onAction="#viewMeals"
+                style="-fx-background-color: #FF4081; -fx-text-fill: white; -fx-padding: 12 25; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-font-size: 16px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0, 0, 5);"/>
+        <Button fx:id="medicalTrackingButton" text="Suivi Médical" onAction="#medicalTracking"
+                style="-fx-background-color: #FF4081; -fx-text-fill: white; -fx-padding: 12 25; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-font-size: 16px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0, 0, 5);"/>
+        <!-- Bouton Chatbot ajouté -->
+        <Button fx:id="chatbotButton" text="Chatbot Assistant" onAction="#openChatbot"
+                style="-fx-background-color: #FF4081; -fx-text-fill: white; -fx-padding: 12 25; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-font-size: 16px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0, 0, 5);"/>
+    </VBox>
+
+    <!-- Bouton de déconnexion -->
+    <Button fx:id="logoutButton" text="Déconnexion" onAction="#logout"
+            style="-fx-background-color: #F78DA7; -fx-text-fill: white; -fx-padding: 10 25; -fx-background-radius: 25; -fx-border-radius: 25; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0, 0, 5);"/>
+
+</VBox>
+
+
+
+
+
+
+
+

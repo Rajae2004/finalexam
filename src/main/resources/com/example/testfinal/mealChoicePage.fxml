@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<HBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.testfinal.MealsController" spacing="20"
+      stylesheets="@/styles.css">
+
+    <!-- Section de gauche : Choisir l'objectif -->
+    <VBox alignment="CENTER" spacing="15" prefWidth="350" styleClass="meals-list-section">
+        <Label text="Choisissez votre objectif" styleClass="section-title"/>
+
+        <Button text="Perdre du poids" onAction="#chooseGoalLoseWeight" styleClass="goal-button"/>
+        <Button text="Prendre du poids" onAction="#chooseGoalGainWeight" styleClass="goal-button"/>
+        <Button text="Rester stable" onAction="#chooseGoalMaintainWeight" styleClass="goal-button"/>
+    </VBox>
+
+    <!-- Section de droite : Liste des repas selon l'objectif -->
+    <VBox alignment="CENTER" spacing="15" prefWidth="350" styleClass="meal-list-section">
+        <Label text="Repas recommandés" styleClass="section-title"/>
+
+        <!-- Liste des repas -->
+        <ListView fx:id="mealsListView" prefHeight="200" styleClass="list-view"/>
+
+        <!-- Affichage des détails du repas -->
+        <Button fx:id="viewMealDetailsButton" text="Afficher les détails" onAction="#viewMealDetails" styleClass="details-button"/>
+        <Label fx:id="mealDetailsLabel" visible="false" styleClass="details-label"/>
+        <Hyperlink fx:id="mealDetailsLink" visible="false" styleClass="details-link"/>
+
+        <!-- Bouton retour -->
+        <Button fx:id="backButton" text="Retour" onAction="#goBack" styleClass="back-button"/>
+    </VBox>
+</HBox>
+
+
+
+
+

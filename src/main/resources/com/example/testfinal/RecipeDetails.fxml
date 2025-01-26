@@ -1,0 +1,22 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.testfinal.RecipeDetailsController" spacing="20" alignment="CENTER"
+      style="-fx-font-family: 'Segoe UI'; -fx-background-color: #f8f1f9;" prefWidth="600" prefHeight="400">
+    <Label text="🌸 Détails des Recettes 🌸" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #9C27B0;"/>
+
+    <!-- TableView pour afficher les recettes -->
+    <TableView fx:id="recipeTable" prefHeight="300">
+        <columns>
+            <TableColumn text="Nom" fx:id="nameColumn" prefWidth="200"/>
+            <TableColumn text="URL Préparation" fx:id="urlColumn" prefWidth="250"/>
+            <TableColumn text="Calories" fx:id="caloriesColumn" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <!-- Bouton pour revenir au dashboard -->
+    <Button text="Retour" onAction="#goBack"
+            style="-fx-background-color: #FF4081; -fx-text-fill: white; -fx-padding: 10 25; -fx-background-radius: 25;"/>
+</VBox>
+
